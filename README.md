@@ -33,3 +33,8 @@ ok: [localhost]
 PLAY RECAP *********************************************************************
 localhost                  : ok=3    changed=0    unreachable=0    failed=0  
 ```
+
+## How to Add/Change Ansible?
+
+Goto /src/main.yml and call your role. You role should be under /src/roles/. <BR>
+There is a sample GIT role here: https://github.com/diegopacheco/ansible-docker/tree/master/src/roles/git/tasks
