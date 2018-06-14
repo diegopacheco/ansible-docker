@@ -20,4 +20,5 @@ RUN mkdir /etc/ansible/ && \
     echo "localhost ansible_connection=local" >> /etc/ansible/hosts && \
     echo "export ANSIBLE_INVENTORY=~/ansible_hosts" >> /etc/profile
 COPY . .
-CMD ["/usr/local/bin/ansible-playbook","/app/main.yml"]
+RUN chmod +x /run.sh
+CMD ["/run.sh"]

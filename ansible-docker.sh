@@ -1,12 +1,17 @@
 #!/bin/bash
 
+SHARED=$(pwd)/src/:/app/
+
 function bake(){
    docker build -t diegopacheco/ansibledocker . --network=host
 }
 
 function run(){
-   SHARED=$(pwd)/src/:/app/
    docker run -v $SHARED --rm --name ansibledocker diegopacheco/ansibledocker
+}
+
+function lint(){
+  echo "TBD"
 }
 
 function help(){
@@ -21,6 +26,9 @@ case $1 in
           ;;
       "run")
           run
+          ;;
+       "lint")
+          lint
           ;;
       *)
           help
