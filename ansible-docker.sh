@@ -5,7 +5,8 @@ function bake(){
 }
 
 function run(){
-   docker run --rm --name ansibledocker diegopacheco/ansibledocker
+   SHARED=$(pwd)/src/:/app/
+   docker run -v $SHARED --rm --name ansibledocker diegopacheco/ansibledocker
 }
 
 function help(){
