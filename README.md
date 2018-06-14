@@ -46,7 +46,7 @@ There is support for ansible-lint. Just do:
 ./ansible-docker.sh lint main.yml
 ```
 ```bash
-./ansible-docker.sh lint main.yml    01:19:32  12.30G   0.70   
+./ansible-docker.sh lint main.yml
 [ANSIBLE0017] become_user requires become to work as expected
 /app/main.yml:3
 {'become_user': {'hosts': '127.0.0.1', 'roles': ['git'], 'vars': {'myvar': 10, '__file__': '/app/main.yml', '__line__': 6}, 'become_user': 'root', '__file__': '/app/main.yml', '__line__': 3}}
