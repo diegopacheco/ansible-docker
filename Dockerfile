@@ -19,6 +19,8 @@ RUN mkdir /etc/ansible/ && \
     echo "[localhost]" > /etc/ansible/hosts && \
     echo "localhost ansible_connection=local" >> /etc/ansible/hosts && \
     echo "export ANSIBLE_INVENTORY=~/ansible_hosts" >> /etc/profile
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py" && python2.7 get-pip.py
+RUN pip install ansible-lint
 COPY . .
 RUN chmod +x /run.sh
 CMD ["/run.sh"]
