@@ -1,0 +1,7 @@
+---
+
+- name: ensure yum is updated
+  action: yum name=* state=latest
+
+- name:  ensure Git is present
+  action: yum pkg=git state=present
